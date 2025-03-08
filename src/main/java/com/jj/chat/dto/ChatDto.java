@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class chatDto {
+public class ChatDto {
     public enum MessageType {
         ENTER, TALK, LEAVE
     }

@@ -9,7 +9,7 @@ import java.util.*;
 
 @Service
 @Slf4j
-public class ChatRoomService {
+public class ChatService {
     private Map<String, ChatRoom> chatRoomMap;
 
     @PostConstruct
@@ -41,13 +41,13 @@ public class ChatRoomService {
     }
 
     // 채팅방 인원+1
-    public void plusUserCnt(String roomId){
+    public void increaseUserCnt(String roomId){
         ChatRoom room = chatRoomMap.get(roomId);
         room.setUserCount(room.getUserCount()+1);
     }
 
     // 채팅방 인원-1
-    public void minusUserCnt(String roomId){
+    public void decreaseUserCnt(String roomId){
         ChatRoom room = chatRoomMap.get(roomId);
         room.setUserCount(room.getUserCount()-1);
     }
